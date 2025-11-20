@@ -26,6 +26,7 @@ header {
 }
 header img {
     height: 50px;
+    max-width: 100%;
 }
 
 /* ---------- MAIN CONTAINER ---------- */
@@ -86,8 +87,8 @@ header img {
 }
 
 .ref-box h3 {
-    margin-bottom: 10px;
     font-size: 18px;
+    margin-bottom: 10px;
 }
 
 .code-display {
@@ -117,10 +118,10 @@ header img {
     border: none;
     padding: 12px 18px;
     border-radius: 8px;
-    display: inline-block;
-    margin-top: 12px;
     font-size: 16px;
     cursor: pointer;
+    margin-top: 12px;
+    display: inline-block;
 }
 
 /* ---------- CTA STRIP ---------- */
@@ -144,9 +145,10 @@ header img {
     border-radius: 10px;
     cursor: pointer;
     background: white;
+    white-space: nowrap;
 }
 
-/* ---------- ABOUT, HOW, FAQ ---------- */
+/* ---------- SECTIONS ---------- */
 section {
     margin-top: 40px;
 }
@@ -168,6 +170,59 @@ footer {
     background: #111;
     color: white;
     font-size: 14px;
+}
+
+/* ---------- RESPONSIVE BREAKPOINTS ---------- */
+@media (max-width: 980px) {
+    .hero-box {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .features {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .cta-strip {
+        flex-direction: column;
+        font-size: 18px;
+    }
+
+    .strip-btn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero-left h1 {
+        font-size: 26px;
+    }
+
+    .hero-box {
+        padding: 25px;
+    }
+
+    .features {
+        grid-template-columns: 1fr;
+    }
+
+    .cta-strip {
+        font-size: 16px;
+        padding: 20px;
+    }
+
+    .strip-btn {
+        width: 100%;
+        font-size: 15px;
+    }
+
+    .ref-box {
+        padding: 20px;
+    }
+
+    .code-display {
+        font-size: 22px;
+    }
 }
 </style>
 </head>
@@ -191,7 +246,6 @@ footer {
                 Join Hyperliquid and enjoy an instant 10% trading fee discount. Trade faster with on-chain execution, deep liquidity, and low costs across perpetual futures markets.
             </p>
 
-            <!-- Features -->
             <div class="features">
                 <div class="feature-card">
                     <strong>Low Trading Fees</strong>
@@ -200,22 +254,21 @@ footer {
 
                 <div class="feature-card">
                     <strong>Deep Liquidity</strong>
-                    <p>Hyperliquid provides stable, smooth price execution with reliable liquidity.</p>
+                    <p>Stable and smooth price execution with reliable liquidity.</p>
                 </div>
 
                 <div class="feature-card">
                     <strong>No KYC Needed</strong>
-                    <p>Start trading instantly. No identity verification required to trade.</p>
+                    <p>Start trading instantly. No identity verification required.</p>
                 </div>
 
                 <div class="feature-card">
                     <strong>On-Chain Transparency</strong>
-                    <p>Enjoy fast, transparent, decentralized trading on Hyperliquid’s L1 chain.</p>
+                    <p>Fast, transparent, decentralized trading on Hyperliquid L1.</p>
                 </div>
             </div>
         </div>
 
-        <!-- RIGHT SIDE REFERRAL BOX -->
         <div class="ref-box">
             <h3>Get 10% off trading fees when you sign up here</h3>
 
@@ -223,7 +276,7 @@ footer {
 
             <button id="copyBtn" class="copy-btn">Click to Copy</button>
 
-            <a href="#" target="_blank">
+            <a href="#">
                 <div class="signup-btn">Sign Up – Activate Discount</div>
             </a>
 
@@ -245,10 +298,10 @@ footer {
     <section>
         <h2>About Hyperliquid</h2>
         <p>
-            Hyperliquid is a next-generation decentralized perpetual futures exchange designed for traders who want high speed, efficiency, and transparency. Unlike many DEXs that rely heavily on AMMs, Hyperliquid uses a full on-chain order book, allowing traders to experience centralized-exchange-level performance without sacrificing decentralization. Its architecture is powered by Hyperliquid L1, a custom blockchain optimized for ultra-fast trading, low latency, and real-time updates.
+            Hyperliquid is a next-generation decentralized perpetual futures exchange designed for traders who want high speed, efficiency, and transparency. Unlike many DEXs that rely heavily on AMMs, Hyperliquid uses a full on-chain order book, giving users a centralized-exchange-level experience while remaining fully decentralized.
         </p>
         <p>
-            One of the standout features of Hyperliquid is its ability to offer deep liquidity across major crypto assets. This ensures minimal slippage, making it ideal for both retail traders and professional market participants. The exchange has gained popularity due to its user-friendly interface, strong on-chain transparency, and capability to support high-volume trading environments. Combined with the referral code <b>10SAVE</b>, traders can reduce their cost even further while benefiting from the platform’s advanced tools.
+            The exchange is powered by Hyperliquid L1, a blockchain optimized specifically for ultra-fast trading. Deep liquidity, minimal slippage, and a clean interface make it ideal for beginners and professionals alike. When combined with the referral code <b>10SAVE</b>, traders enjoy additional savings on every trade they place.
         </p>
     </section>
 
@@ -256,39 +309,38 @@ footer {
     <section>
         <h2>How to Apply the Hyperliquid Referral Code</h2>
         <ol>
-            <li>Visit the official Hyperliquid website or mobile app.</li>
-            <li>Create a new trading account or connect your Web3 wallet.</li>
+            <li>Visit the official Hyperliquid website or app.</li>
+            <li>Create an account or connect your Web3 wallet.</li>
             <li>Navigate to <b>Account Settings → Referral Code</b>.</li>
-            <li>Enter the referral code <b>10SAVE</b> and confirm.</li>
-            <li>Start trading with your 10% lifetime discount on trading fees.</li>
+            <li>Enter <b>10SAVE</b> and confirm.</li>
+            <li>Enjoy your 10% lifetime trading fee discount.</li>
         </ol>
-
         <p>
-            The entire process takes less than 30 seconds, and once applied, the discount stays active permanently. This means you save money on every trade you make—whether you're scalping, swing trading, or entering long-term positions.
+            The process takes less than a minute and unlocks permanent savings for your account.
         </p>
     </section>
 
-    <!-- NEW SECTION: WHY USE A REFERRAL CODE -->
+    <!-- WHY USE -->
     <section>
         <h2>Why Use a Hyperliquid Referral Code?</h2>
         <p>
-            Referral codes are one of the easiest ways to save on trading fees across crypto exchanges. Since trading fees add up over time, even a small percentage discount can significantly boost your profits—especially for high-frequency or long-term traders. With the referral code <b>10SAVE</b>, you get an immediate 10% discount on every trade.
+            Referral codes help traders save money by reducing exchange trading fees. With enough volume, even a small percentage discount creates significant long-term savings. Hyperliquid gives a <b>permanent</b> discount using the code <b>10SAVE</b>.
         </p>
         <p>
-            Unlike other platforms where referral bonuses last only for a limited period, Hyperliquid offers a <b>lifetime</b> discount. This makes it extremely valuable, especially if you're planning to trade actively or explore the wide range of perpetual markets available.
+            Many exchanges offer temporary or limited-time referral bonuses, but Hyperliquid stands out by offering lifetime fee reductions without any restrictions or expiration.
         </p>
     </section>
 
-    <!-- NEW SECTION: HYPERLIQUID FEES -->
+    <!-- FEES -->
     <section>
         <h2>Hyperliquid Fee Structure</h2>
         <p>
-            Hyperliquid is known for its competitive fee structure. Standard trading fees are already lower than most decentralized and centralized exchanges. When you apply the referral code <b>10SAVE</b>, your fees drop even further, making every position more cost-efficient.
+            Hyperliquid has a very competitive fee structure compared to both centralized and decentralized exchanges. Using the referral code <b>10SAVE</b> gives you even lower fees forever.
         </p>
         <ul>
-            <li><b>Maker Fees:</b> Low fees for providing liquidity.</li>
-            <li><b>Taker Fees:</b> Slightly higher, but still extremely competitive.</li>
-            <li><b>No deposit or withdrawal fees:</b> Since it’s fully on-chain.</li>
+            <li><b>Maker Fees:</b> Extremely low for providing liquidity.</li>
+            <li><b>Taker Fees:</b> Slightly higher but remain competitive.</li>
+            <li><b>No deposit/withdrawal fees:</b> Everything is on-chain.</li>
         </ul>
     </section>
 
@@ -298,61 +350,57 @@ footer {
 
         <div class="faq-item">
             <strong>1. What is the Hyperliquid referral code?</strong>
-            <p>The referral code is <b>10SAVE</b>, giving you 10% lower trading fees.</p>
+            <p>The official referral code is <b>10SAVE</b>.</p>
         </div>
 
         <div class="faq-item">
-            <strong>2. Does Hyperliquid require KYC?</strong>
-            <p>No, Hyperliquid is completely decentralized and does not require identity verification. You can start trading immediately by connecting your wallet.</p>
+            <strong>2. Do I need KYC to trade?</strong>
+            <p>No. Hyperliquid does not require KYC; it's fully decentralized.</p>
         </div>
 
         <div class="faq-item">
-            <strong>3. Is the discount permanent?</strong>
-            <p>Yes. The 10% discount remains active forever once you enter the code <b>10SAVE</b>.</p>
+            <strong>3. Is the 10% discount permanent?</strong>
+            <p>Yes. Once applied, the discount stays forever.</p>
         </div>
 
         <div class="faq-item">
             <strong>4. Is Hyperliquid safe?</strong>
-            <p>Yes. Hyperliquid runs entirely on-chain and maintains full transparency. All transactions, order placements, and executions are verifiable on Hyperliquid L1.</p>
+            <p>Yes. The platform operates fully on-chain, ensuring transparent execution.</p>
         </div>
 
         <div class="faq-item">
-            <strong>5. Can I use the code later?</strong>
-            <p>Yes. Even if you already created your account, you can still go to your account settings and add the referral code <b>10SAVE</b>.</p>
+            <strong>5. Can I add the code later?</strong>
+            <p>Yes. Go to account settings and enter <b>10SAVE</b> anytime.</p>
         </div>
 
         <div class="faq-item">
-            <strong>6. Does Hyperliquid support many cryptocurrencies?</strong>
-            <p>Hyperliquid offers a wide list of perpetual futures markets, covering major assets like BTC, ETH, SOL, and many trending altcoins. New assets are added regularly.</p>
+            <strong>6. Which assets can I trade?</strong>
+            <p>BTC, ETH, SOL, and many more popular perpetual markets.</p>
         </div>
     </section>
 
-    <!-- NEW SECTION: TRADING TIPS -->
+    <!-- TRADING TIPS -->
     <section>
         <h2>Tips for New Hyperliquid Traders</h2>
-        <p>
-            If you’re new to perpetual futures or decentralized trading, here are some tips to help you get started:
-        </p>
+        <p>Helpful tips for newcomers:</p>
         <ul>
-            <li>Start with small positions to understand market behavior.</li>
-            <li>Monitor funding rates before entering long or short positions.</li>
-            <li>Use stop-losses to manage risk effectively.</li>
-            <li>Avoid over-leveraging your trades.</li>
-            <li>Keep track of gas fees and ensure your wallet is funded.</li>
+            <li>Start with smaller positions.</li>
+            <li>Watch funding rates.</li>
+            <li>Use stop-loss orders.</li>
+            <li>Avoid over-leveraging.</li>
+            <li>Keep your wallet funded for gas fees.</li>
         </ul>
     </section>
 
-    <!-- NEW SECTION: SECURITY PRACTICES -->
+    <!-- SECURITY -->
     <section>
         <h2>Security Best Practices</h2>
-        <p>
-            While Hyperliquid is highly secure, it’s still essential to follow best security practices:
-        </p>
+        <p>To stay safe when trading:</p>
         <ul>
-            <li>Use a hardware wallet for maximum safety.</li>
-            <li>Beware of phishing websites—always double-check URLs.</li>
-            <li>Keep your seed phrase offline and never share it with anyone.</li>
-            <li>Enable wallet-level security features when available.</li>
+            <li>Use a hardware wallet.</li>
+            <li>Double-check URLs.</li>
+            <li>Keep your seed phrase offline.</li>
+            <li>Avoid clicking unknown links.</li>
         </ul>
     </section>
 
@@ -383,4 +431,3 @@ document.getElementById("copyBtn2").addEventListener("click", function () {
 
 </body>
 </html>
-
